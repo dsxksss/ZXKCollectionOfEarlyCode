@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>属性选择器</title>
+
+    <style>
+        .cdc a{
+            float: left;
+            display: block;
+            height: 50px;
+            width: 50px;
+            border-radius: 10px;
+            background: turquoise;
+            text-align: center;
+            color: salmon;
+            text-decoration: none;
+            margin-right: 5px;
+            font: bold 20px/50px Arial;
+        }
+
+
+        /* 属性名 属性名=属性值(支持正则表达式) 
+        =绝对等于
+        *=包含这个元素
+        ^=以这个开头
+        $=以这个结尾
+        */
+        /* 选中存在id属性的元素 */
+        a[id]{
+            background: red;
+        }
+        /* 选中id中存在firstd的元素 */
+        a[id=firstd]{
+            background: slateblue;
+        }
+        /* 选中class中有dsxk的元素 */
+        /* class内值记得加双引号" */
+        a[class="dsxk"]{
+            color:yellow;
+        }
+        /* 选中href里以https开头的元素 */
+        a[href ^=https]{
+            color: springgreen;
+        }
+        /* 选中href里以html结尾的元素 */
+        a[href $=html]{
+            color:seashell;
+        }
+    </style>
+  </head>
+  <body>
+    <p class="cdc">
+      <a href="https://www.baidu.com" class="dsxk zzz" id="lg">1</a>
+      <a href="">2</a>
+      <a href="https://bilibili.com" class="dsxk">3</a>
+      <a href="">4</a>
+      <a href="/html/fist.html" id="xaq">5</a>
+      <a href="" id="firstd">6</a>
+    </p>
+  </body>
+</html>
