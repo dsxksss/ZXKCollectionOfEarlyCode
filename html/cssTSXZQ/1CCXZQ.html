@@ -13,17 +13,26 @@
       这里表示选中了body内的p标签(不包括ul里的p标签)
       */
       body p{
-        /* background表示背景 */
+         /* background表示背景  */
         background: aqua;
       }
-      body ul{
-        /* 这里选中的是ul里的全部标签 */
-        background-color: aquamarine;
+      /* 子选择器 */
+      body>p{
+        color:darkorchid;
+      }
+      /* 相邻类型选择器 只有一个，相邻(向下) */
+      .dsxk+p{
+        background: deeppink;
+      }
+      /* 通用选择器  当前选中元素的向下所有类型*/
+      .dsxk~p{
+        background: gold;
       }
     </style>
   </head>
   <body>
-      <p>p1</p>
+       <p>p0</p>
+      <p class="dsxk">p1</p>
       <p>p2</p>
       <p>p3</p>
       <ul>
@@ -31,5 +40,7 @@
         <li>p5</li>
         <li>p6</li>
       </ul>
+       <P class="dsxk">p7</P>
+       <p>p8</p>
   </body>
 </html>
