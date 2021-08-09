@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>用户登入页面</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        /* 让页面始终占浏览器区域总高度 */
+        height: 100vh;
+        /* 弹性布局，全部元素剧中 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* 背景渐变色 */
+        background: linear-gradient(to right,rgba(19, 220, 247, 0.63), turquoise);
+      }
+      .shell {
+        /* 宽和高 */
+        width: 640px;
+        height: 320px;
+        /* 弹性布局 */
+        display: flex;
+      }
+      /* 左盒子 */
+      .box-left {
+        background: #fff;
+        height: 280px;
+        top: 23px;
+        position: relative;
+        width: 50%;
+        border-radius:20px;
+      }
+      .box-left h2 {
+        font: 900 50px "";
+        margin: 50px 40px 40px;
+      }
+      .box-left span {
+        display: block;
+        color: #999;
+        font-style: 14px;
+        margin: 40px;
+      }
+      /* 右盒子 */
+      .box-right {
+        background: #474a59;
+        /* 边框阴影 */
+        box-shadow: 0 0 40px 16px rgba(0, 0, 0, 0.2);
+        color: #f1f1f2;
+        width: 60%;
+      }
+      /* 输入框 */
+      .form {
+        margin: 40px;
+        position: absolute;
+      }
+      label {
+        color: #fffdfd;
+        display: block;
+        font-size: 15px;
+        height: 16px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        position: relative;
+      }
+      input {
+        background: transparent;
+        /* 透明度 */
+        border: 0;
+        color: #f2f2ff;
+        font-style: 20px;
+        height: 30px;
+        line-height: 30px;
+        width: 100%;
+        outline: none !important;
+      }
+      /* 输入条 */
+      label::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 52px;
+        width: 100%;
+        height: 3px;
+        /* 颜色往右渐变 */
+        background: linear-gradient(to right, #44ffff, #b888ff);
+      }
+      /* 登入按钮 */
+      #submit {
+        color: #fff;
+        margin-top: 40px;
+        width: 100px;
+        height: 35px;
+        background: rgba(255, 255, 255, 0.1);
+        /* 边框变圆 */
+        border-radius: 20px;
+        float: right;
+        /* 动画时长 */
+        transition: .25s;
+      }
+      /* 鼠标触碰变白 */
+      #submit:hover{
+          /* 字体被处触碰后的字体间距 */
+          letter-spacing: 2.7px;
+          color: #000;
+          background: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <div class="box-left">
+        <h2>Login</h2>
+        <span
+          >Just log in,you can enjoy more services,interact with me here,and
+          publish your opinions</span
+        >
+      </div>
+      <div class="box-right">
+        <div class="form">
+          <label for="email">User</label>
+          <input type="text" id="email" />
+          <label for="password">Password</label>
+          <input type="password" id="password" />
+          <input type="submit" id="submit" value="Login" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
