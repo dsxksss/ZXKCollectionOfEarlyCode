@@ -1,8 +1,8 @@
-x = 12
-y = 2
-unit_price = 13
+import math  #导入了math这个对象的全部方法
+
+#字符串
 course = "python programming"
-print(type(y))  #打印变量类型
+print(type(course))  #打印变量类型
 print(len(course))  #打印字符串长度
 print(course[0])  #打印字符串的第一个字
 print(course[-1])  #打印字符串最后一个字
@@ -20,3 +20,29 @@ print(course.upper())  #upper()函数作用是”不改变原字符串内容前�
 print(course.lower())  #不改变内容将字符串内容转换成小写
 print(course.title())  #不改变内容将字符串首字母变成大写
 print(course.strip())  #不改变内容将字符串开头多余的空格删除
+print(course.find("pro"))  #查找字符串中符合内容的字符下标,如果没有则返回-1
+print(course.replace("p", "j"))  #不改变内容将字符串内容改变,右项变左项
+print("pro" in course)  #查找内容是否存在于字符串中,返回ture,flase
+print("pro" not in course)  #和上面相反,查找内容是否不存在于字符串中
+
+#num
+x = 2
+y = 1.3
+z = 2**4
+print("\n", x, "\n", y, "\n", z)
+print(abs(x))  #绝对值
+print(round(y))  #四舍五入
+print(math.ceil(18.1))  #该小数向上一项的最大整数
+
+#input
+i = input("i: ")
+o = i
+print(f"i: {i},o: {o}")
+
+#if条件判断
+temperature = 35
+if temperature > 30:  #要空格表示作用域
+    print("Is's warm")
+    print("Drink water")
+else:
+    print("Done")
