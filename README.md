@@ -1,8 +1,5 @@
 # 简介
-
-```c
-int main(){
-    print("hola");
-    return 0;
-}
+·这个仓库是存放自己学习笔记源码的地方
+```py
+print("hi !!!")
 ```
