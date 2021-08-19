@@ -62,3 +62,19 @@ def hs6(**user):
 
 
 hs6(id=1, name="jeak", age=18)
+
+
+#表情转换器函数版
+def emoji_converter(message):
+    message1 = message.split(' ')  #利用空格区分开了一句话的多个词语
+    #print(message2)  #试试效果#message2是一个列表
+    dictionary_3 = {"Hi!": "苏小姐要天天开心喔!!!", ":)": "😄", ":(": "😞"}
+    output = ""
+    for sum in message1:
+        #这里的get方法,其默认值设置成了自身,如果没有对应的key,默认值则返回自身
+        output += dictionary_3.get(sum, sum) + " "
+    return output
+
+
+massage2 = input(">:")
+print(emoji_converter(massage2))
