@@ -1,0 +1,49 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "dsxkhtml_2fde99da"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main2",
+      "request": "launch",
+      "mainClass": "Main2",
+      "projectName": "dsxkhtml_2fde99da"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main2",
+      "request": "launch",
+      "mainClass": "hello.Main2",
+      "projectName": "dsxkhtml_2fde99da"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "hello.Main",
+      "projectName": "dsxkhtml_2fde99da"
+    },
+    {
+      "name": "C++ Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceRoot}/${fileBasenameNoExtension}.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceRoot}",
+      "environment": [],
+      "externalConsole": true,
+      "preLaunchTask": "g1++",
+      "windows": {
+        "MIMode": "gdb",
+        "miDebuggerPath": "C:\\mingw64\\bin\\gdb.exe"
+      }
+    }
+  ]
+}
