@@ -1,0 +1,6 @@
+/*阅读说明:
+1、ServerSocket:创建一个服务端的socket,构造参数1:服务端端口号;
+2、Socket:创建一个套接字socket,服务端不用构造,可用accept对象函数初始化;
+3、ServerSocket.accept()对象函数,用来赋值监听端口连接,是一个阻塞型函数;
+4、BufferedWriter:将文本写入字符输出流,构造方法:创建使用默认大小的输出缓冲区的缓冲字符输出流
+*/
