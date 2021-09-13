@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我是标题</title>
+</head>
+<body>
+<!--使用name作为标记-->
+<a name="top"></a>
+
+<!--标题标签-->
+<h1>一级标签</h1>
+<h2>二级标签</h2>
+<h3>三级标签</h3>
+<h4>四级标签</h4>
+<h5>五级标签</h5>
+<h6>六级标签</h6>
+
+<!--段落标签 可以理解为java.println()-->
+<p>呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜</p>
+<p>呼呼呼呼呼呼呼呼呼呼呼呼呼</p>
+
+<!--换行标签  单标签-->
+呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜
+<br/>
+呼呼呼呼呼呼呼呼
+
+<!--粗体、斜体-->
+<h1>字体样式标签</h1>
+<strong>我是一个粗体</strong>
+<br/>
+<em>我是一个斜体</em>
+
+<!--特殊符号-->
+我是空&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格
+<br/>
+大于号&gt;<br/>
+小于号&lt;<br/>
+版权号&copy;&nbsp;dsxk所有<br/>
+
+<!--图像标签-->
+<!-- <img src="图像地址" alt="图像的替代文字"
+title="鼠标悬停提示的文字" width="图像宽度" height="图像高度" /> -->
+<!-- 小提示:win下../表示上一级目录 -->
+<img src="resources/image/t1.png" alt="图片" title="悬停文字" width="560" height="300"/>
+<br/>
+
+<!--链接标签-->
+<!-- <a href="链接路径" target="目标窗口位置">链接文本或图像</a> -->
+<!-- target常用值:_self、_blank
+_blank:新开一个页面进行跳转
+_self:在本网页进行跳转
+-->
+<!-- 记住加http://、https://、也可以跳转本地html文件 -->
+<!-- 可以嵌套图片标签 -->
+<a href="https://www.baidu.com" target="_parent">点我进入百度</a>
+<br/>
+
+<!-- 锚链接
+1、需要一个锚标记
+2、跳转到此标记点
+用#号表示。
+小提示:也可以跳到另外一个html文件的锚链接里如:xxx.html#top-->
+<a href="#top">按我跳转到顶部</a>
+<br/>
+
+<!--功能性链接
+邮件链接:mailto:
+-->
+<a href="mailto:2546650292@qq.com">联系邮箱</a>
+<br/>
+
+<!--有序列表:ol
+应用范围:试卷、问答、、、
+-->
+<ol>
+    <li>java</li>
+    <li>c++</li>
+    <li>python</li>
+</ol>
+<hr/><!--分割线-->
+<!--无序列表:ul
+应用范围:导航、侧边栏、、、
+-->
+<ul>
+    <li>java</li>
+    <li>c++</li>
+    <li>python</li>
+</ul>
+<hr/><!--分割线-->
+<!--自定义列表
+dl:标签
+dt:列表名称
+dd:列表内容
+应用范围:公司网站底部、、、
+-->
+<dl>
+    <dt>学科</dt>
+    <dd>java</dd>
+    <dd>c++</dd>
+    <dd>python</dd>
+</dl>
+
+<!-- 音频视频标签
+    src:资源路径
+    controls:控制条
+    autoplay:自动播放
+    -->
+<video src="xxx" controls autoplay></video>
+    <br />
+    <audio src="xxx" controls autoplay></audio>
+
+    <br />
+    <!-- 内联网页
+    src:引用页面地址
+    name:"框架标识名"
+    -->
+    <iframe src="[图片]https://www.bilibili.com" frameborder="0" width="1080px" height="900px"></iframe>
+
+    <!-- post和get表达提交
+    action:表单提交的位置,可以是网站,也可以是一个请求处理
+    method:post、get 提交方式
+          post方式提交:"比较"安全、传输大文件
+          get方式提交:不安全、高效
+    -->
+    <form action="提交到哪里" method="post">
+
+        <!-- 输入框:input type="输入格式"
+        value:内容的初始值
+        maxlength:内容最多支持输入多少位数
+        size:文本框的长度
+        readonly:表示只读不可更改内容
+        hidden:隐藏此标签
+        placeholder:提示信息
+        required：必须要填写内容
+        -->
+        <p>用户昵称:<input type="text" name="username" value="内容初始值" maxlength="4" readonly hidden></p>
+        <p>用户密码:<input type="password" name="userpassword" maxlength="" size="30" placeholder="这里输入密码" required></p>
+        <!-- 单选框标签
+        type="radio"
+        value:单选框的值,radio必须要value值
+        name:表示组,组一样才可以单选
+        checked:默认选中
+        disabled:禁用选项
+        -->
+        <p>性别:
+            <input type="radio" value="boy" name="a" checked />男
+            <input type="radio" value="girl" name="a" disabled />女
+        </p>
+
+        <!-- 多选框标签
+        type="checkbox"
+        value:多选框的值,checkbox必须要value值
+        name:表示组,组不一样才可以多选,但性质不一样
+        checked:默认选中
+        -->
+        <p>爱好:
+            <input type="checkbox" value="sleep" name="b" checked />睡觉
+            <input type="checkbox" value="eat" name="b" checked /> 吃
+        </p>
+
+        <!-- 按钮标签
+        type=
+          "button"普通按钮
+          "image" 图片按钮
+          "submit"提交按钮
+          "reset" 重置按钮
+        value:表示按钮的字
+        name:表示组
+         -->
+        <p>按钮:
+            <input type="button" value="按钮" name="c" id="">
+        </p>
+
+        <!--下拉框,列表框
+            下拉框标签:select,包含列表框
+            列表框标签:option
+            selected:默认选择
+          -->
+        <p>下拉框:
+            <select name="列表名称">
+                <option value="china" selected>中国</option>
+                <option value="US">美国</option>
+                <option value="ETH">瑞士</option>
+                <option value="NF">法国</option>
+                </select>
+        </p>
+
+        <!--文本域框
+        标签:textarea
+        -->
+        <p>反馈:
+            <textarea name="textWBYK" cols="30" rows="10">文本内容</textarea>
+        </p>
+
+        <!-- 文件域框
+        标签:<input type="file"
+        -->
+        <p>选择文件:
+            <input type="file" name="flies">
+            <input type="button" value="上传" name="upload">
+        </p>
+
+        <!-- 邮件格式验证
+        标签:<input type="email"
+        -->
+        <p>输入邮箱:
+            <input type="email" name="YX">
+        </p>
+
+        <!-- URL格式验证
+        标签:input type="url"
+        -->
+        <p>输入网址:
+            <input type="url" name="URL">
+        </p>
+
+        <!-- 数字格式验证
+        标签:input type="number"
+             max:最大值
+             min:最小值
+             step:数字加减值
+        -->
+        <p>输入纯数字:
+            <input type="number" name="num" max="11" min="1" step="1">
+        </p>
+
+        <!-- 滑块
+        标签:input type="range"
+             max:最大值
+             min:最小值
+             step:数字加减值
+        -->
+        <p>拖动滑块:
+            <input type="range" name="huakuai" max="100" min="0" step="20">
+        </p>
+
+        <!-- 搜索框
+        标签:input type="range"
+        -->
+        <p>搜索框:
+            <input type="search" name="search">
+        </p>
+
+        <!-- 自定义数字输入格式
+        pattern:正则表达式,手写比较麻烦,推荐用现有的
+        "https://www.jb51.net/tools/regexsc.htm"
+-->
+        <p>自定义数字输入格式
+            <input type="number" name="niceNumber" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)
+            (?=.*[A-Z])(?=.*[a-z])(?!.*\n).*$"/>
+        </p>
+
+        <p>
+            <input type="submit" value="提交">
+            <input type="reset" value="清空表单">
+        </p>
+
+        <!-- 增强鼠标可用性
+        标签:label,(可以不在一起)
+            for:需要到达的地方
+            id:目的地
+        -->
+        <p>
+            <label for="text">点击文字定位控件框</label>
+            <input type="text" id="text">
+        </p>
+
+    </form>
+
+</body>
+</html>
