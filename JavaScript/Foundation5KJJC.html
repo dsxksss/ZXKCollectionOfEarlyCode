@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Foundation 实例</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/foundation/5.5.3/css/foundation.min.css">
+  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/foundation/5.5.3/js/foundation.min.js"></script>
+  <script src="https://cdn.staticfile.org/foundation/5.5.3/js/vendor/modernizr.js"></script>
+</head>
+<body style="padding-top:10px;">
+
+<div class="switch" style="float:left;">
+  <input id="mySwitch4" type="checkbox">
+  <label for="mySwitch4"></label>
+</div> 
+
+<div class="switch" style="padding-left:25px;float:left;">
+  <input id="mySwitch5" type="checkbox" checked>
+  <label for="mySwitch5"></label>
+</div>
+
+<div class="switch round" style="padding-left:25px;float:left;">
+  <input id="mySwitch6" type="checkbox" checked>
+  <label for="mySwitch6"></label>
+</div>
+</div>
+
+<div>
+<button type="button" class="button">Default</button>
+<button type="button" class="button secondary">Secondary</button>
+<button type="button" class="button success">Success</button>
+<button type="button" class="button info tiny">Info</button>
+<button type="button" class="button warning">Warning</button>
+<button type="button" class="button alert">Alert</button>
+</div>
+
+<div class="row">
+  <div class="medium-12 columns">
+    <div class="row">
+      <div class="small-10 medium-11 columns">
+        <div class="range-slider" data-slider="50" data-options="display_selector:#slider2;">
+          <span class="range-slider-handle" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></span>
+          <span class="range-slider-active-segment" style="width: 50%;"></span>
+        </div>
+      </div>
+      <div class="small-2 medium-1 columns">
+        <span id="slider2" style="display: block;margin-top: 14px;">50</span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 初始化 Foundation JS -->
+<script>
+$(document).ready(function() {
+    $(document).foundation();
+})
+</script>
+
+</body>
+</html>
+
