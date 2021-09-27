@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>欢迎👏来到我的网页</h1>
+    <p id="myP">p标签改变前</p>
+    <div id="myDIV">div标签改变前</div>
+    <br />
+    <script>
+      let arrs = ["Jack", "Bob", "XXX"];
+      //write函数是添加网页内容的document对象里的内置方法，
+      // 注意⚠️利用writeln或write方法会刷新已存在的网页元素
+      for (let i = 0; i < 3; i++) {
+        document.write(arrs[i] + "<br/>");
+      }
+      //document DOM语法类
+      //其语法类对象中的getElementById作用是寻找其对应标签的id
+      //其语法子方法中的innerHTML(变量)，此(变量)作用是修改找到此标签的内容
+      document.getElementById("myP").innerHTML = "p标签改变后";
+      document.getElementById("myDIV").innerHTML = "div标签改变后";
+    </script>
+    <p>你也可以通过按下面这个按钮来改变网页标签内容</p>
+    <!-- onclick表示一旦按下此控件后会发生的事情，下列动作是调用了CQ函数，记得加上括号 -->
+    <button type="button" onclick="CQ()">按我改变网页内容</button>
+    <script>
+      function CQ() {
+        let My = "💔";
+        document.getElementById("myP").innerHTML = "我是通过按钮改变的p标签";
+        document.getElementById("myDIV").innerHTML =
+          "我是通过按钮改变的div标签";
+      }
+    </script>
+  </body>
+</html>
