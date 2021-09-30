@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>利用JavaScript修改了标签里的属性内容</h1>
+    <img id="tt" src="html/img/t1.png" width="260" />
+    <button type="button" onclick="ctp()">点我切换图片</button>
+    <script>
+      function ctp() {
+        var a = document.getElementById("tt");
+        a.src = "html/img/t2.png";
+        a.width = 300;
+      }
+    </script>
+    <p id="time"></p>
+    <button type="button" onclick="states()">按我查看时间</button>
+    <button type="button" onclick="stop()">按我停止时间</button>
+    <script>
+      /* setInterval() - 间隔指定的毫秒数不停地执行指定的代码。C1:执行代码，C2:time
+         setTimeout() - 在指定的毫秒数后执行指定代码。C1:执行代码，C2:time
+         clearInterval() 方法用于停止 setInterval()方法执行的函数代码。C1:关闭对象
+         clearTimeout() 方法用于停止执行setTimeout()方法的函数代码。C1:关闭对象
+    */
+      function states() {
+        b = setInterval(function () {
+          times();
+        }, 1000);
+      }
+      function times() {
+        var t = new Date().toLocaleTimeString();
+        document.getElementById("time").innerHTML = t;
+      }
+      function stop() {
+        clearInterval(b);
+      }
+    </script>
+  </body>
+</html>
