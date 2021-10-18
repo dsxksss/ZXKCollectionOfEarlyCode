@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>弹性盒子排版</title>
+    <style>
+      body {
+        margin: 10px;
+      }
+      .container {
+        border: 3px solid lightgrey;
+        height: 90vh;
+        display: flex;
+        /* 对齐方向设置 
+        命名虽然不同，但功能正好是互补的，不要在意其命名
+        如是row，则其排列方式应用justify-content 
+        如是column，则其排列方式应用align-items
+        他们两可以配合使用，不是说只可以使用一个，而是可以同时使用
+        flex属性默认都是flex-start
+        */
+        /*
+        可以用row-reverse或column-reverse来翻转内容顺序
+        这也会导致flex-start or flex-end顺序改变
+        */
+        flex-direction: row;
+        justify-content: center; /*目前是垂直坐标，如是row则是水平坐标*/
+        align-items: center; /*目前是水平坐标，如是row则是垂直坐标*/
+      }
+      .box {
+        /* flex大小设置：这些属性都是设置在弹性盒子内元素的，而不是弹性盒子容器的
+        flex-basis:弹性独立大小，设置每个元素的大小
+        flex-grow:弹性曾长属性设置增加的系数(不用带单位)
+        flex-shrink:弹性收缩设置收缩的系数(不用带单位)
+        也可以用flex简写,顺序和上面👆一样
+        */
+        flex: 1 1 15rem; /*顺序是：增长系数，缩减系数，基本宽度*/
+        width: 5rem;
+        height: 5rem;
+        background: gold;
+        margin: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box1">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+    </div>
+  </body>
+</html>

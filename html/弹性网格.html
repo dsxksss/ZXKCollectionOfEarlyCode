@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>网格排版</title>
+  </head>
+  <style>
+    body {
+      margin: 10px;
+    }
+    .bigbox {
+      display: grid;
+      /*创建3x2的网格排列*/
+      /* grid-template-rows: repeat(3, 100px); /*等同于100px 100px 100px */
+      /* grid-template-columns: repeat(2, 100px); 等同于100px 100px
+      一般使用简写(记住用斜杆分割开)*/
+      /*创建了一个3*2的网格用来存放元素*/
+      grid-template: repeat(3, 100px) / repeat(2, 100px);
+      border: 3px solid lightgrey;
+      justify-content: flex-start; /*设置了此元素网格外的位置*/
+      align-content: flex-end; /*设置了此元素网格外的位置*/
+      justify-items: center; /*设置了此元素网格内的位置*/
+      align-items: flex-end; /*设置了此元素网格内的位置*/
+      gap: 10px 20px; /*各网格之间的间距*/
+      height: 100vh;
+    }
+    .box {
+      width: 5rem;
+      height: 5rem;
+      background-color: gold;
+    }
+  </style>
+  <body>
+    <div class="bigbox">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+    </div>
+  </body>
+</html>
