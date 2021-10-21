@@ -8,9 +8,10 @@
 # 5、将此项目设置为类结构化
 # 6、显示读取数据的类型(非表格对其化)
 # 7、拥有更多兼容性,可以处理其他表格而不局限于目前此表格
-#TODO:
+
+#TODO:orFIXME:
 # {
-# 1、
+# 1、增加额外功能
 # 2、将此项目会发生异常地方加上解决方法(已解决一处,,,)
 #、、、、、、
 # }
@@ -34,7 +35,7 @@ class XM():
         sheet = excel_sheet[excel_sheets]  # 表示要读取此文件的第一页表格,这里的Sheet1开头s必须大写
         man_size = to_whatuser_data  #开始从第x个位置读取数据
 
-        for sum_one in range(sheet.max_row - 1):  #总共录入的学生人数
+        for sum_one in range(sheet.max_row):  #总共录入的学生人数
             for sum in range(2, sheet.max_column):  #一个学生的总信息个数
                 my_cell = sheet.cell(man_size, sum)  # 2表示表格行,sum表示表格列
                 student_data_list.append(
@@ -44,6 +45,7 @@ class XM():
         student_data_temporary = []  #暂存一个人的全部信息
         student_data_biglist = []  #最后的结果,是一个二维列表
 
+        #may TODO:此处可以利用切片实现，但我暂时不知会不会影响系统开销，所以暂时不利用
         for sum in student_data_list:  #读取五个数据存储一次
             student_data_temporary.append(sum)
             if len(student_data_temporary
@@ -51,16 +53,17 @@ class XM():
                 student_data_biglist.append(student_data_temporary)
                 student_data_temporary = []  #达到要求之后,清空暂存数据,继续接受至无数据
 
-        #print("\n\n\n\n")
-        # print(name_list_big)
+        print("\n\n\n\n")
+        print(student_data_list)
 
         #按一个学生的全部信息显示(data已归纳)
-        #for sum in range(len(student_data_biglist)):
-        #    print(student_data_biglist[sum])
+        # for sum in range(len(student_data_biglist)):
+        #     print(student_data_biglist[sum])
 
-        print("人数总共读取", "[\033[1;32m", len(student_data_biglist), "\033[0m]",
-              "个")  #彩色显示读取的人数
-        print("数据总共读取", "[\033[1;32m", len(student_data_list), "\033[0m]",
+        print("人数总共读取", "[\033[1;32m",
+              len(student_data_biglist) - 1, "\033[0m]", "个")  #彩色显示读取的人数
+        print("数据总共读取", "[\033[1;32m",
+              len(student_data_list) - 5, "\033[0m]",
               "条")  #彩色显示读取的总数据(data未进行归纳)
         return student_data_biglist
 #查询函数(也可以使用index函数查找内容下标,这里没使用是因为不会用index查找二维列表😅)
@@ -88,5 +91,5 @@ try:
         pass
     else:
         print("\033[1;31m数据库中暂无此人!!!\033[0m")
-except ValueError:
+except ValueError:  #捕捉异常输入
     print("\033[1;31mError发生错误![您输入的值不符合搜索规范或含有风险代码,请重开程序再使用]\033[0m")
